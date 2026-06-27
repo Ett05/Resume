@@ -18,7 +18,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -44,8 +44,7 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure ATS readability
-\pdfgentounicode=1
+
 
 %-------------------------
 % Custom commands
@@ -124,7 +123,10 @@
 {Software Engineer Intern (Incoming)}{May 2026 -- Aug. 2026}
 {Asana}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Incoming Software Engineer Intern on the Conversion \& Retention (Co:Re) team.}
+\resumeItem{Designed a \textbf{2x2 factorial A/B experiment} on Asana's upgrade conversion funnel by decoupling two bundled \textbf{feature flags} into independent domain-level enrollments, eliminating confounded measurement and enabling clean causal attribution of two UI treatments across user segments.}
+\resumeItem{Led a \textbf{framework-level fix} for a layout shift bug affecting all upsell CTA callsites across the codebase, building a size-matched \textbf{shimmer placeholder} for async-loading buttons and eliminating per-callsite loading state handling for all future migration sites.}
+\resumeItem{Generalized 2 hardcoded helper functions flagged in code review into \textbf{product-agnostic utilities}, refactoring tightly coupled product ID dependencies and updating associated \textbf{GraphQL fragments} across \textbf{7 files} to support reuse across the checkout domain.}
+\resumeItem{Migrated legacy upsell components to a centralized \textbf{framework abstraction} and diagnosed 2 async dependency failures breaking post-migration test coverage, resolving them with \textbf{synchronous test stubs} without modifying component logic.}
 \resumeItemListEnd
 \resumeSubheading
 {AI Engineer Intern (Return Offer)}{Sept. 2025 -- Dec. 2025}
@@ -146,14 +148,6 @@
 \resumeItem{Rebuilt a dynamic form generation system \textbf{(React + Django)} to expand supported onboarding workflows by \textbf{100\%}, ensuring consistent validation logic and improving error reduction by \textbf{40\%}.}
 \resumeItemListEnd
 
-\resumeSubheading
-{Software Developer}{Sept. 2024 -- May 2025}
-{UofT Blueprint}{Toronto, ON}
-\resumeItemListStart
-\resumeItem{Developed a full-stack \textbf{web + mobile platform} for a non-profit, ensuring cross-platform scalability and adoption across 50+ users.}
-\resumeItem{Designed responsive front-end interfaces using \textbf{Next.js, React, TailwindCSS, and Expo SDK}, enhancing user experience across platforms.}
-\resumeItem{Implemented backend services with \textbf{tRPC APIs and Prisma} for schema management and migrations.}
-\resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
