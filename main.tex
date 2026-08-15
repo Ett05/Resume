@@ -33,8 +33,8 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
 
@@ -44,7 +44,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-5pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 %-------------------------
@@ -82,9 +82,9 @@
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-4pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -119,7 +119,7 @@
 \resumeItemListStart
 \resumeItem{Re-architected Asana's \textbf{core upgrade and checkout funnel} to deploy 2 high-stakes conversion experiments, overhauling legacy billing pathways to drive a projected \textbf{\$1.5M annual revenue win}.}
 \resumeItem{Architected a centralized, multi-layered \textbf{upsell framework} to unify fragmented purchase flows, abstracting complex domain state, dynamic pricing configurations, and business logic into a \textbf{plug-and-play caller API}.}
-\resumeItem{Engineered an extensible \textbf{testing harness with custom mock utilities}, enabling cross-functional product teams to simulate asynchronous payment boundaries and verify state transitions with \textbf{zero billing regressions}.}
+\resumeItem{Engineered a modular \textbf{testing framework via a mixin pattern}, providing consuming test suites with plug-and-play helpers to configure and verify complex domain states across asynchronous billing boundaries.}
 \resumeItemListEnd
 
 \resumeSubheading
