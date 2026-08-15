@@ -18,10 +18,13 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
 
 \pagestyle{fancy}
-\fancyhf{}
+\fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -30,8 +33,8 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.75in}
-\addtolength{\textheight}{1.5in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -39,11 +42,10 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
+% Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-
 
 %-------------------------
 % Custom commands
@@ -59,13 +61,6 @@
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
-}
-
-\usepackage{calc} 
-\newcommand{\resumeSubSubheadingLeft}[2]{
-\begin{description}[leftmargin=!,labelwidth=\widthof{\small\bfseries #1}]
-    \item[\small #1]{\textit{\small  #2}}
-\end{description}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -96,13 +91,12 @@
 
 \begin{document}
 
+%----------HEADING----------
 \begin{center}
-    \vspace{-15pt}
-    \textbf{\Huge \scshape Girik Setya} \\ \vspace{2pt}
-    \small 289-885-5466 $|$ \href{mailto:girik.setya@gmail.com }{\underline{girik.setya@gmail.com}} $|$ 
+    \textbf{\Huge \scshape Girik Setya} \\ \vspace{1pt}
+    \small 289-885-5466 $|$ \href{mailto:girik.setya@gmail.com}{\underline{girik.setya@gmail.com}} $|$ 
     \href{https://www.linkedin.com/in/girik-setya/}{\underline{linkedin.com/in/girik-setya}} $|$
     \href{https://github.com/Ett05}{\underline{github.com/Ett05}}
-    \vspace{-10pt}
 \end{center}
 
 %-----------EDUCATION-----------
@@ -111,7 +105,7 @@
     \resumeSubheading
       {University of Toronto St. George}{Toronto, ON}
       {Bachelor of Science in Computer Science}{Sept. 2023 -- May 2028}
-    \vspace{3pt}
+    \vspace{2pt}
     \item\small{\textbf{Relevant Coursework:} Operating Systems, Data Structures, Algorithms, Parallel Computing, Machine Learning}
   \resumeSubHeadingListEnd
 
@@ -127,11 +121,12 @@
 \resumeItem{Architected a centralized, multi-layered \textbf{upsell framework} to unify fragmented purchase flows, abstracting complex domain state, dynamic pricing configurations, and business logic into a \textbf{plug-and-play caller API}.}
 \resumeItem{Engineered an extensible \textbf{testing harness with custom mock utilities}, enabling cross-functional product teams to simulate asynchronous payment boundaries and verify state transitions with \textbf{zero billing regressions}.}
 \resumeItemListEnd
+
 \resumeSubheading
 {AI Engineer Intern (Return Offer)}{Sept. 2025 -- Dec. 2025}
 {NetNow}{Toronto, ON}
 \resumeItemListStart
-\resumeItem{Architected an \textbf{Agentic Orchestration system} using \textbf{LangGraph} and \textbf{LangChain} to automate enterprise decision-making; implemented\textbf{ custom state management} that reduced decision-making time by \textbf{35\%}.}
+\resumeItem{Architected an \textbf{Agentic Orchestration system} using \textbf{LangGraph} and \textbf{LangChain} to automate enterprise decision-making; implemented \textbf{custom state management} that reduced decision-making time by \textbf{35\%}.}
 \resumeItem{Engineered an automated \textbf{Evaluation framework} utilizing an \textbf{LLM-as-a-judge} pattern to benchmark multi-step agent trajectories; authored scoring scripts that reduced manual review workload by \textbf{60\%} while ensuring production-grade reliability.}
 \resumeItem{Deployed a Gemini-based \textbf{document analysis pipeline} on \textbf{GCP}; leveraged request batching, prompt caching, and containerized pipelines to reduce latency by \textbf{50\%} while maintaining \textbf{95\%+} structured extraction accuracy.}
 \resumeItemListEnd
@@ -145,7 +140,6 @@
 \resumeItem{Rebuilt a dynamic form generation system \textbf{(React + Django)} to expand supported onboarding workflows by \textbf{100\%}, ensuring consistent validation logic and improving error reduction by \textbf{40\%}.}
 \resumeItemListEnd
 
-
 \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
@@ -154,7 +148,7 @@
 \resumeProjectHeading
 {\textbf{\href{https://github.com/Ett05/sde_app}{SDE Canvas}} $|$ \emph{Next.js, TypeScript, React Flow, Ollama, Docker}}{}
 \resumeItemListStart
-\resumeItem{Built an \textbf{AI-powered} system design practice platform with a free-form whiteboard and \textbf{LLM-graded test mode}}
+\resumeItem{Built an \textbf{AI-powered} system design practice platform with a free-form whiteboard and \textbf{LLM-graded test mode}.}
 \resumeItem{Engineered \textbf{topology-aware node analysis} by traversing upstream/downstream graph dependencies and injecting the full context chain into the LLM before inference.}
 \resumeItem{Designed an \textbf{agentic architecture generation pipeline} using structured tool-use output to autonomously construct system diagrams from natural language prompts.}
 \resumeItemListEnd
